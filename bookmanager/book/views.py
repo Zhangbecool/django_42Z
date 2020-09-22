@@ -5,4 +5,9 @@ from django.shortcuts import render
 
 def index(request):
 
-    return HttpResponse('ok')
+    context = {
+        'log': '都有忘得',
+        'name': 'zhangbecool'
+    }
+
+    return render(request, 'book/index.html', context)
