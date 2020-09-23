@@ -34,3 +34,11 @@ BookInfo.objects.filter(id__gt=3)
 BookInfo.objects.filter(pub_date__year='1980')
 # 查询1990年1月1日后发表的图书
 BookInfo.objects.filter(pub_date__gt='1990-1-1')
+from django.db.models import F
+BookInfo.objects.filter(readcount__gt=F('commentcount'))
+# 查询阅读量大于2倍评论量的图书。
+BookInfo.objects.filter(readcount__gt=F('commentcount')*2)
+# 查询阅读量大于20，或编号小于3的图书，只能使用Q对象实现
+BookInfo.objects.filter(Q(readcount__gt=20) | Q(id__lt=3))
+# 查询编号不等于3的图书。
+BookInfo.objects.filter(~Q(id=3))
