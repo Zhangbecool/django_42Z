@@ -85,10 +85,23 @@ def cookie(request):
             flag = False
     if name and pw and flag:
 
-        return JsonResponse(ck)
+        jresponse = JsonResponse(ck)
+        # jresponse.delete_cookie('username')
+
+        return jresponse
     else:
         response = HttpResponse('set_cookie')
-        response.set_cookie('username', username)
+        response.set_cookie('username', username, max_age=60*2)
         response.set_cookie('password', password)
 
         return response
+
+
+def session(request):
+    session_dj = request.session.get('username')
+    name = request.GET.get('username')
+    if not session_dj or session_dj != name and name:
+        request.session['username'] = name
+        return HttpResponse('set-session')
+
+    return HttpResponse(session_dj)

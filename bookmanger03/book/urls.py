@@ -17,4 +17,5 @@ urlpatterns = [
     path('res/', res),
     path('respon/', respon),
     path('cookie/', cookie),
+    path('session/', session),
 ]
