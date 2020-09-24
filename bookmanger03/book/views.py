@@ -46,6 +46,6 @@ def res(request):
     body_dict = json.loads(body_str)
     print(f' body_dict:{body_dict}')
 
-    # print(request.META['name'])
+    print(request.META['HTTP_NAME'])
 
     return HttpResponse('res')
