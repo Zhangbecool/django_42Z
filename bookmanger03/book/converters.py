@@ -10,4 +10,3 @@ class mobile:
     def to_url(self, value):
         return str(value)
 
-register_converter(mobile, 'phone')

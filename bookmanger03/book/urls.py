@@ -1,11 +1,18 @@
-from django.urls import path
+from django.urls import path, register_converter
 
-from book.views import index, shop, cook
+from book.views import *
 # from django.urls import converters
-import book.converters
+from book.converters import mobile
+
+register_converter(mobile, 'phone')
+
+
+
 
 urlpatterns = [
     path('index/', index),
     path('<int:city_id>/<phone:shop_id>/', shop),
     path('cook/', cook),
+    path('from/', fromdate),
+    path('res/', res),
 ]

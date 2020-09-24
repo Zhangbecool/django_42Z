@@ -1,3 +1,5 @@
+import json
+
 from django.http import HttpResponse
 from django.shortcuts import render
 
@@ -21,3 +23,29 @@ def cook(request):
     print(name)
 
     return HttpResponse(f'{name}, {l}')
+
+
+def fromdate(request):
+    data = request.POST
+    # print(data)
+    print(data['name'])
+    print(data.get('password'))
+
+    return HttpResponse('from')
+
+
+def res(request):
+    body = request.body
+    print(f'body:{body}')
+    body_str = body.decode()
+    print(f'body_str:{body_str}')
+
+    body_eval = eval(body_str)
+    print(f'body_eval:{body_eval}')
+
+    body_dict = json.loads(body_str)
+    print(f' body_dict:{body_dict}')
+
+    # print(request.META['name'])
+
+    return HttpResponse('res')
