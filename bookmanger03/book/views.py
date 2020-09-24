@@ -67,3 +67,28 @@ def res(request):
 def respon(request):
 
     return redirect('/index')
+
+
+def cookie(request):
+    username = request.GET.get('username')
+    password = request.GET.get('password')
+    print(username, password)
+    name = request.COOKIES.get('username')
+    pw = request.COOKIES.get('password')
+    print('{}, {}'.format(name, pw))
+
+    ck = request.COOKIES
+    print(f'ck{ck}, type:{type(ck)}')
+    flag = True
+    if username and password:
+        if name != username or pw != password:
+            flag = False
+    if name and pw and flag:
+
+        return JsonResponse(ck)
+    else:
+        response = HttpResponse('set_cookie')
+        response.set_cookie('username', username)
+        response.set_cookie('password', password)
+
+        return response
