@@ -1,7 +1,8 @@
 import json
 
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.http import HttpResponse, JsonResponse
+from django.shortcuts import render, redirect
+
 
 # Create your views here.
 
@@ -36,16 +37,33 @@ def fromdate(request):
 
 def res(request):
     body = request.body
-    print(f'body:{body}')
-    body_str = body.decode()
-    print(f'body_str:{body_str}')
+    try:
+        print(f'body:{body}')
+        body_str = body.decode()
+        print(f'body_str:{body_str}')
 
-    body_eval = eval(body_str)
-    print(f'body_eval:{body_eval}')
+        body_eval = eval(body_str)
+        print(f'body_eval:{body_eval}')
 
-    body_dict = json.loads(body_str)
-    print(f' body_dict:{body_dict}')
+        body_dict = json.loads(body_str)
+        print(f' body_dict:{body_dict}')
 
-    print(request.META['HTTP_NAME'])
+        print(request.META['HTTP_NAME'])
 
-    return HttpResponse('res')
+    except Exception as e:
+        print(e)
+    info = {
+        "name": "张三",
+        "adress": "shunyi"
+
+    }
+
+    response = JsonResponse(info, content_type='text/html; charset=utf-8')
+    # response['Content-Type'] = 'text/html; charset=utf-8'
+
+    return response
+
+
+def respon(request):
+
+    return redirect('/index')

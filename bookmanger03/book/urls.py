@@ -15,4 +15,5 @@ urlpatterns = [
     path('cook/', cook),
     path('from/', fromdate),
     path('res/', res),
+    path('respon/', respon)
 ]
