@@ -90,11 +90,12 @@ def cookie(request):
 
         return jresponse
     else:
-        response = HttpResponse('set_cookie')
-        response.set_cookie('username', username, max_age=60*2)
-        response.set_cookie('password', password)
+        red = redirect('/index')
+        # response = HttpResponse()
+        red.set_cookie('username', username, max_age=60*2)
+        red.set_cookie('password', password)
 
-        return response
+        return red
 
 
 def session(request):
@@ -102,6 +103,7 @@ def session(request):
     name = request.GET.get('username')
     if not session_dj or session_dj != name and name:
         request.session['username'] = name
-        return HttpResponse('set-session')
+        request.session.set_expiry(60*60)
+        return redirect(f'/session/?username={name}')
 
     return HttpResponse(session_dj)
