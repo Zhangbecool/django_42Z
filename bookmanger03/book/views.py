@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 
 
 # Create your views here.
+from django.views import View
 
 
 def index(request):
@@ -90,7 +91,7 @@ def cookie(request):
 
         return jresponse
     else:
-        red = redirect('/index')
+        red = redirect('/cookie')
         # response = HttpResponse()
         red.set_cookie('username', username, max_age=60*2)
         red.set_cookie('password', password)
@@ -107,3 +108,11 @@ def session(request):
         return redirect(f'/session/?username={name}')
 
     return HttpResponse(session_dj)
+
+
+class login(View):
+    def get(self, request):
+        return HttpResponse('get')
+
+    def post(self, request):
+        return HttpResponse('post')

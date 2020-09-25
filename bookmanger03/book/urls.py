@@ -18,4 +18,5 @@ urlpatterns = [
     path('respon/', respon),
     path('cookie/', cookie),
     path('session/', session),
+    path('login/', login.as_view())
 ]
