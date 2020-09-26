@@ -80,7 +80,6 @@ class SetSession(View):
         return HttpResponse('set_session')
 
 
-
 def get_session(request):
     name = request.session.get('name')
     pw = request.session.get('password')

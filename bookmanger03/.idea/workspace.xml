@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72eb2843-90db-4842-b3ca-d25a12067622" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/people/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/people/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/people/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/people/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,8 +48,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/people/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="170">
+              <caret line="84" column="40" lean-forward="true" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -90,9 +88,9 @@
         <option value="$PROJECT_DIR$/bookmanger03/settings.py" />
         <option value="$PROJECT_DIR$/book/urls.py" />
         <option value="$PROJECT_DIR$/book/views.py" />
-        <option value="$PROJECT_DIR$/people/views.py" />
         <option value="$PROJECT_DIR$/people/urls.py" />
         <option value="$PROJECT_DIR$/book/converters.py" />
+        <option value="$PROJECT_DIR$/people/views.py" />
       </list>
     </option>
   </component>
@@ -198,23 +196,22 @@
       <workItem from="1601037850884" duration="683000" />
       <workItem from="1601087753193" duration="3032000" />
       <workItem from="1601091723006" duration="5465000" />
-      <workItem from="1601098525425" duration="2116000" />
+      <workItem from="1601098525425" duration="2288000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26064000" />
+    <option name="totallyTimeSpent" value="26236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1849" height="864" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21424596" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49972177" visible="true" weight="0.27222222" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49972177" weight="0.27222222" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -223,7 +220,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50027823" side_tool="true" weight="0.28055555" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.34166667" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.34166667" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -382,8 +379,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/people/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="170">
+          <caret line="84" column="40" lean-forward="true" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
