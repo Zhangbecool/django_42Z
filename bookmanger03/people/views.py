@@ -84,6 +84,6 @@ def get_session(request):
     name = request.session.get('name')
     pw = request.session.get('password')
     # print(request.session)
-    request.session.flush()
+    # request.session.flush()
     return HttpResponse(f'name:{name}, pw:{pw}')
 
