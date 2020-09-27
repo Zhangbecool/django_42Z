@@ -8,14 +8,29 @@
 	<div id="app">
 		{{abc}}
 		]] abc [[
+
+		<span v-bind:title="ads">停留</span>
+		<a v-bind:href="he" v-bind:title="he">点击没惊喜</a>
+		<hr>
+		<span v-if="see == 1">皇帝</span>
+		<span v-else-if="see == 2">皇亲</span>
+		<span v-else-if="see == 3">国戚</span>
+		<span v-else-if="see == 4">大臣</span>
+		<span v-else>平民</span>
+		<span v-show='show'>你看我在不在</span>
+
 	</div>
 </body>
 <script type="text/javascript">
 	var app = new Vue({
 		el:'#app',
-		delimiters: [']]', '[['],
+		// delimiters: [']]', '[['],
 		data:{
-			abc:'hello'
+			abc:'hello',
+			ads: 'a litle'.toLocaleString(),
+			he: 'http://www.baidu.com'.toLocaleString(),
+			see: 1,
+			show: true,
 		}
 	})
 </script>
