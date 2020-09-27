@@ -110,9 +110,23 @@ def session(request):
     return HttpResponse(session_dj)
 
 
-class login(View):
+def outer(fn):
+    def inner(*args, **kwargs):
+        flag = False
+        if flag:
+            return HttpResponse('请登录')
+        else:
+            return fn(*args, **kwargs)
+    return inner
+
+from django.contrib.auth.mixins import LoginRequiredMixin
+
+
+class login(LoginRequiredMixin, View):
+    # @outer
     def get(self, request):
         return HttpResponse('get')
 
+    # @outer
     def post(self, request):
         return HttpResponse('post')
