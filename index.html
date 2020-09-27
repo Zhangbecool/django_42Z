@@ -30,6 +30,20 @@
 			<li v-for="(value, index) in objects">{{ index }}, {{ value.name }} {{ value.age }}</li>
 		</ul>
 
+		<hr>
+
+		<button v-on:click='add'>add</button>
+		<span>运气 {{ luck }}</span>
+		<hr>
+
+		<table border="2px">
+			<tr>
+				<td>用户名</td>
+				<td><input type="text" name="" v-model='name'></td>
+
+			</tr>
+		</table>
+		<button @click='register'>注册</button>
 	</div>
 </body>
 <script type="text/javascript">
@@ -44,7 +58,17 @@
 			show: true,
 			tags: ['django基础', 'vue', 'flask'],
 			object: {name: 'zhangsan', age: 18},
-			objects: [{name: '李四', age: 55}, {name: "如花", age: 18}]
+			objects: [{name: '李四', age: 55}, {name: "如花", age: 18}],
+			luck: 1,
+			name: '',
+		},
+		methods:{
+			add: function () {
+				this.luck ++
+			},
+			register: function () {
+				alert(this.name)
+			}
 		}
 	})
 </script>

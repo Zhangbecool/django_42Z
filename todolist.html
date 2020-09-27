@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>todolist</title>
+	<script type="text/javascript" src="vue-2.5.16.js"></script>
+
+</head>
+<body>
+	<div id='app'>
+		<!-- {{ abc }} -->
+		<input type="text" name="" v-model='name'>
+		<button @click="add">添加</button>
+		<ul>
+			<li v-for="(tag, index) in tags">{{ index + 1 }}: {{ tag }}</li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript">
+	var app = new Vue({
+		el: '#app',
+		data: {
+			abc: 'hello',
+			tags: ['django基础', 'vue', 'flask'],
+			name: '',
+		},
+		methods: {
+			add: function () {
+				this.tags.push(this.name)
+				this.name = ''
+			}
+		}
+	})
+
+</script>
+</html>
