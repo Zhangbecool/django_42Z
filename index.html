@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>学习vue</title>
+	<script type="text/javascript" src="vue-2.5.16.js"></script>
+</head>
+<body>
+	<div id="app">
+		{{abc}}
+		]] abc [[
+	</div>
+</body>
+<script type="text/javascript">
+	var app = new Vue({
+		el:'#app',
+		delimiters: [']]', '[['],
+		data:{
+			abc:'hello'
+		}
+	})
+</script>
+</html>
