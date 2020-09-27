@@ -11,6 +11,8 @@
 
 		<span v-bind:title="ads">停留</span>
 		<a v-bind:href="he" v-bind:title="he">点击没惊喜</a>
+
+
 		<hr>
 		<span v-if="see == 1">皇帝</span>
 		<span v-else-if="see == 2">皇亲</span>
@@ -18,6 +20,15 @@
 		<span v-else-if="see == 4">大臣</span>
 		<span v-else>平民</span>
 		<span v-show='show'>你看我在不在</span>
+		<hr>
+
+		<ul>
+			<!-- <li v-for="(tag, index) in tags">{{ index + 1 }}: {{ tag }}</li> -->
+			<!-- 对象 -->
+			<!-- <li v-for="(value, name, index) in object">{{ index + 1 }} {{ name }}: {{ value }}</li> -->
+			<!-- 对象列表 -->
+			<li v-for="(value, index) in objects">{{ index }}, {{ value.name }} {{ value.age }}</li>
+		</ul>
 
 	</div>
 </body>
@@ -31,6 +42,9 @@
 			he: 'http://www.baidu.com'.toLocaleString(),
 			see: 1,
 			show: true,
+			tags: ['django基础', 'vue', 'flask'],
+			object: {name: 'zhangsan', age: 18},
+			objects: [{name: '李四', age: 55}, {name: "如花", age: 18}]
 		}
 	})
 </script>
